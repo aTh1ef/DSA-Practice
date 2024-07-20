@@ -1,3 +1,4 @@
+# string problem 1
 def removeOutermostParentheses(s: str) -> str:
     result = []
     opened = 0

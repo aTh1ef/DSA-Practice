@@ -1,3 +1,4 @@
+# string problem 2
 def reverseWords(s:str) -> str:
     words = s.split()
     reverse_words = words[::-1]
