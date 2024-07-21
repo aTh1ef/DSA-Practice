@@ -26,7 +26,7 @@ This repository is dedicated to solving various DSA problems using Python. It se
 ### Strings
 
 1. **Remove Outermost Parentheses** 
-2. **Reverse Words in a Given String / Palindrome Check** - Coming soon
+2. **Reverse Words in a Given String / Palindrome Check**
 3. **Largest Odd Number in a String**
 4. **Longest Common Prefix** (Explanation Link: https://youtu.be/8C6F8_nM0qs?si=TyAH9sslD8rOzHdd)
 5. **Isomorphic String** (Explanation Link: https://youtu.be/7yF-U1hLEqQ?si=lRDbeGGS2OwK9CWz)
