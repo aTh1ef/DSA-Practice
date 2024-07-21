@@ -1,3 +1,4 @@
+# Given two strings s and goal, determine if s can be rotated to match goal by shifting the characters.
 def rotateString(s: str, goal: str) -> bool:
     if len(s) != len(goal):
         return False
