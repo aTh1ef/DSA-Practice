@@ -28,6 +28,7 @@ This repository is dedicated to solving various DSA problems using Python. It se
 1. **Remove Outermost Parentheses** - Coming soon
 2. **Reverse Words in a Given String / Palindrome Check** - Coming soon
 3. **Largest Odd Number in a String**
+4. **Longest Common Prefix**
 
 ## Goals
 
