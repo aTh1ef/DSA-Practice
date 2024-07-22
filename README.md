@@ -32,6 +32,7 @@ This repository is dedicated to solving various DSA problems using Python. It se
 5. **Isomorphic String** (Explanation Link: https://youtu.be/7yF-U1hLEqQ?si=lRDbeGGS2OwK9CWz)
 6. **Rotate String to Goal** (Explanation Link: https://youtu.be/SkX6IfJixM0?si=yowc0FVBLzjyyC6F)
 7. **Valid Anagram or Not** (Explanation Link: https://youtu.be/_cCTcPQik6A?si=E38poGruVnb0AeBu)
+8. **Sort Characters by Frequency** 
 ## Goals
 
 My primary objectives for this project are:
