@@ -34,6 +34,7 @@ This repository is dedicated to solving various DSA problems using Python. It se
 7. **Valid Anagram or Not** (Explanation Link: https://youtu.be/_cCTcPQik6A?si=E38poGruVnb0AeBu)
 8. **Sort Characters by Frequency** 
 9. **Find Maximum Nesting Depth of the Parentheses** (Explanation Link: https://youtu.be/FiQFJvCvWK4?si=_tWhcYdoZV0qIHAs)
+10. **Convert Roman to Integer** (Explanation Link: https://youtu.be/dlATMslQ6Uc?si=LT6nM1XfIFDjAPkl)
 ## Goals
 
 My primary objectives for this project are:
