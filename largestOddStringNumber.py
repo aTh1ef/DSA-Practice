@@ -12,6 +12,6 @@ def largestOddNumber(s: str) -> str:
     return result
 
 if __name__ == "__main__":
-    s = "89787"
+    s = "89784"
     answer = largestOddNumber(s)
     print("The odd number in the string is ->", answer)

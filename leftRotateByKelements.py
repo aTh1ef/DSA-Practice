@@ -1,5 +1,4 @@
 # Rotate array by K elements
-
 def reverse(arr, start, end):
     while start < end:
         arr[start], arr[end] = arr[end], arr[start]
@@ -19,8 +18,10 @@ def rotate(arr, k):
     # Reverse the entire array
     reverse(arr, 0, n - 1)
 
+    return arr
+
 if __name__ == "__main__":
     arr = [1, 2, 3, 4, 5]
     k = 2
-    rotate(arr, k)
-    print(f"After rotating the elements to left by {k}: {arr}")
+    result = rotate(arr, k)
+    print(f"After rotating the elements to left by k elements", result)

@@ -1,7 +1,6 @@
 # Find the number that appears once
-
 def findOnce(arr,n):
-    xorr=0
+    xorr = 0
     for i in range(0,n):
         xorr ^= arr[i]
     return xorr

@@ -1,6 +1,5 @@
 #Find Longest Common Prefix (string problem 4)
-from typing import List
-def longestCommonPrefix(strs: List[str]) -> str:
+def longestCommonPrefix(strs: str) -> str:
     if not strs:
         return ""
 

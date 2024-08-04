@@ -2,7 +2,7 @@
 def maxConsecutive(arr,n):
     cnt = maxi = 0
     for i in range(0,n):
-        if arr[i]==1:
+        if arr[i] == 1:
             cnt += 1
             maxi = max(maxi, cnt)
         else:
