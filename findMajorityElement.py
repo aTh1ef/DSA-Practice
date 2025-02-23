@@ -26,5 +26,5 @@ def majorityElement(arr):
 if __name__ == "__main__":
     arr = [2,3,3,4,5,6,7,8,3,3,3,3,3,3]
     result = majorityElement(arr)
-    print("The majority elment is", result )
+    print("The majority element is", result)
 

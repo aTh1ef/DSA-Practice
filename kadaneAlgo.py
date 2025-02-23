@@ -1,4 +1,5 @@
-#Your goal is to find a group of numbers next to each other (a subarray) that adds up to the biggest total. Then, you need to return that total.
+#Your goal is to find a group of numbers next to each other (a subarray) that adds up to the biggest total.
+# Then, you need to return that total.
 def maxSubArray (arr):
     current_sum = arr[0]
     max_sum = arr[0]

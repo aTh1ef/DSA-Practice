@@ -7,7 +7,7 @@ def missingNumber(arr,n):
     return missingNo
 
 if __name__ == "__main__":
-    arr = [1,2,4,5]
+    arr = [1,2,3,5]
     n=5
     result = missingNumber(arr,n)
     print("The missing number is", result)
