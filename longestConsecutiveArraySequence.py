@@ -1,4 +1,5 @@
-# You are given an array of ‘N’ integers. You need to find the length of the longest sequence which contains the consecutive elements.
+# You are given an array of ‘N’ integers.
+# You need to find the length of the longest sequence which contains the consecutive elements.
 
 def longestConsecutive(nums):
     num_set = set(nums)
