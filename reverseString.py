@@ -10,4 +10,4 @@ def reverseString(s):
 
     return "".join(s)
 
-print(reverseString("hello"))
+print(reverseString("My name is papaya"))
