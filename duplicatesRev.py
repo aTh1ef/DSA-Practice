@@ -1,10 +1,15 @@
-def wordsreverse(s: str) -> str:
-    words = s.split()
-    reversew = words[::-1]
+def largestOdd(s: str) -> str:
+    n = len(s)
+    largestoddnum = -1
+    for i in range(0,n):
+        if int(s[i]) % 2 != 0:
+            largestoddnum = i
 
-    return ' '.join(reversew)
+    result = s[:largestoddnum + 1]
+    return result
+
 
 if __name__ == "__main__":
-    s = "my name is japanese"
-    answer = wordsreverse(s)
-    print(answer)
+    s = '42068'
+    ans = largestOdd(s)
+    print(ans)
