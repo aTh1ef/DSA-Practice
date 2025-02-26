@@ -1,23 +1,21 @@
-def iso(s1:str, s2:str) -> str:
-    maps1s2, maps2s1 = {}, {}
-
-    if len(s1) != len(s2):
+def rotate(s:str, goal:str) -> bool:
+    if len(s) != len(goal):
         return False
 
-    for i in range(len(s1)):
-        c1, c2 = s1[i], s2[i]
-
-        if ((c1 in maps1s2 and maps1s2[c1] !=c2) or
-            (c2 in maps2s1 and maps2s1[c2] !=c1)):
-
-         return False
-
-        maps1s2[c1] =c2
-        maps2s1[c2] =c1
-    return True
+    answer = s+s
+    if goal in answer:
+        return True
+    else:
+        return False
 
 if __name__ == "__main__":
-    s1 = "boo"
-    s2 = "bar"
-    result = iso(s1, s2)
-    print("Are the two strings isomorphic True or False -> ", result)
+
+    s1= "abcde"
+    goal1 = "cdeab"
+    result = rotate(s1, goal1)
+    print("Test Case 1: Can s1 be rotated to goal1 -> ", result)
+
+    s2 = "abcde"
+    goal2 = "abdce"
+    result = rotate(s2, goal2)
+    print("Test Case 2: Can s2 be rotated to goal2 -> ", result)
