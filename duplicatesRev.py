@@ -1,28 +1,36 @@
-def parent(s: str) -> int:
-    currentstreak = 0
-    maxstreak = 0
+def roman(s: str) -> str:
 
-    for char in s:
-        if char == '(':
-            currentstreak += 1
-        elif char == ')':
-            currentstreak -= 1
-        maxstreak = max(currentstreak, maxstreak)
-    return maxstreak
 
+
+    ri = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}
+    previous_value = 0
+    total = 0
+
+    for char in reversed(s):
+        current_value = ri[char]
+
+        if current_value < previous_value:
+            total -= current_value
+        else:
+            total += current_value
+
+        previous_value = current_value
+
+    return total
 
 if __name__ == "__main__":
-    #case 1
-    s = "(1+(2*3)+((8)/4))+1"
-    result = parent(s)
-    print("The Maximum Depth of the Parentheses is -> ", result)
+    #case1
+    s = "III"
+    result = roman(s)
+    print("The result after converting roman to integer we get -> ", result)
 
     #case2
-    s = "(a(b)c)"
-    result = parent(s)
-    print("The Maximum Depth of the Parentheses is -> ", result)
+    s = "LVIII"
+    result = roman(s)
+    print("The result after converting roman to integer we get -> ", result)
 
     #case3
-    s = "(()())"
-    result = parent(s)
-    print("The Maximum Depth of the Parentheses is -> ", result)
+    s = "MCMXCIV"
+    result = roman(s)
+    print("The result after converting roman to integer we get -> ", result)
+
