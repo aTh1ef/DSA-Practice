@@ -1,30 +1,17 @@
-def anagram(s1:str, s2: str) -> bool:
+def sort(s:str) -> str:
+    count = {}
 
-    if len(s1) != len(s2):
-        return False
-
-    counts1 = {}
-    counts2 = {}
-
-    for char in s1:
-        if char in counts1:
-            counts1[char] += 1
+    for char in s:
+        if char in count:
+            count[char] += 1
         else:
-            counts1[char] = 1
+            count [char] = 1
 
-    for char in s2:
-        if char in counts2:
-            counts2[char] += 1
-        else:
-            counts2[char] = 1
+    sort_char = sorted(count.items(), key = lambda item: item[1], reverse = True)
 
-    if counts1 == counts2:
-        return True
-    else:
-        return False
+    return ''.join(char * freq for char, freq in sort_char)
 
 if __name__ == "__main__":
-    s1 = "anagram"
-    s2 = "nagaram"
-    result = anagram(s1, s2)
-    print("Are the two strings anagram of each other -> ", result)
+    s = 'aabbbceeee'
+    answer = sort(s)
+    print(answer)
