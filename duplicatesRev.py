@@ -1,17 +1,28 @@
-def sort(s:str) -> str:
-    count = {}
+def parent(s: str) -> int:
+    currentstreak = 0
+    maxstreak = 0
 
     for char in s:
-        if char in count:
-            count[char] += 1
-        else:
-            count [char] = 1
+        if char == '(':
+            currentstreak += 1
+        elif char == ')':
+            currentstreak -= 1
+        maxstreak = max(currentstreak, maxstreak)
+    return maxstreak
 
-    sort_char = sorted(count.items(), key = lambda item: item[1], reverse = True)
-
-    return ''.join(char * freq for char, freq in sort_char)
 
 if __name__ == "__main__":
-    s = 'aabbbceeee'
-    answer = sort(s)
-    print(answer)
+    #case 1
+    s = "(1+(2*3)+((8)/4))+1"
+    result = parent(s)
+    print("The Maximum Depth of the Parentheses is -> ", result)
+
+    #case2
+    s = "(a(b)c)"
+    result = parent(s)
+    print("The Maximum Depth of the Parentheses is -> ", result)
+
+    #case3
+    s = "(()())"
+    result = parent(s)
+    print("The Maximum Depth of the Parentheses is -> ", result)
