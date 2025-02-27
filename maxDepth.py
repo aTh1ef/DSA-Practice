@@ -24,6 +24,6 @@ if __name__ == "__main__":
     print("The Maximum Depth of the Parentheses is -> ", result)
 
     #case3
-    s = "(((((a)))))"
+    s = "((((((a))))))"
     result = maxDepth(s)
     print("The Maximum Depth of the Parentheses is -> ", result)
