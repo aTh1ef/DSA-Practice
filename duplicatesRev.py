@@ -1,36 +1,27 @@
-def roman(s: str) -> str:
-
-
-
-    ri = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}
-    previous_value = 0
+def beast(s:str) -> int:
     total = 0
+    n = len(s)
+    for i in range(n):
+        freq = [0] * 26
 
-    for char in reversed(s):
-        current_value = ri[char]
+        for j in range(i,n):
+            freq[ord(s[j]) - ord('a')] += 1
 
-        if current_value < previous_value:
-            total -= current_value
-        else:
-            total += current_value
+            maxFreq = 0
+            minFreq = float('inf')
 
-        previous_value = current_value
+            for count in freq:
+                if count > 0:
+                    maxFreq = max(maxFreq, count)
+                    minFreq = min(minFreq, count)
+
+            total += maxFreq - minFreq
 
     return total
 
+
 if __name__ == "__main__":
-    #case1
-    s = "III"
-    result = roman(s)
-    print("The result after converting roman to integer we get -> ", result)
+    s = "aabcb"
 
-    #case2
-    s = "LVIII"
-    result = roman(s)
-    print("The result after converting roman to integer we get -> ", result)
-
-    #case3
-    s = "MCMXCIV"
-    result = roman(s)
-    print("The result after converting roman to integer we get -> ", result)
-
+    answer = beast(s)
+    print(answer)
