@@ -30,7 +30,7 @@ if __name__ == "__main__":
     answer = sol.threeSum(nums)
     print(answer)
 
-Thought for 2 seconds```python
+
 # Below is the **exact same code** we're discussing, followed by a **line-by-line breakdown** in **very plain, everyday language**—like explaining to someone completely new to coding. I'll try to be as thorough and clear as possible.
 
 # ---
