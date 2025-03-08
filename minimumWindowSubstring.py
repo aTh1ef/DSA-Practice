@@ -279,7 +279,7 @@ if __name__ == "__main__":
 #   - **Tracking Validity:** Using `have` and `need`, we know when our window has met the requirements.
 
 # This detailed, step-by-step explanation should make it really easy to understand how every part of the code works.
-```
+
 
 
 
