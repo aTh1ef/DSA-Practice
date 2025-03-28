@@ -1,38 +1,30 @@
+#neetcode 44
 class Solution:
     def spiralOrder(self, matrix):
-        # Define ans array to store the result.
-        ans = []
+        res = []
+        l, r = 0, len(matrix[0])
+        t, b = 0, len(matrix)
 
-        # Get the number of rows and columns
-        n = len(matrix)
-        m = len(matrix[0])
+        while l < r and t < b:
+            # move from left to right
+            for i in range(l, r):
+                res.append(matrix[l][i])
+            t += 1
+            # move from top to bottom
+            for i in range(t, b):
+                res.append(matrix[i][r - 1])
+            r -= 1
 
-        # Initialize the pointers required for traversal.
-        top, left = 0, 0
-        bottom, right = n - 1, m - 1
+            if not (l < r and t < b):
+                break
 
-        # Loop until all elements are traversed.
-        while top <= bottom and left <= right:
-            # Traverse from left to right.
-            for i in range(left, right + 1):
-                ans.append(matrix[top][i])
-            top += 1
+            # move right to left
+            for i in range(r - 1, l - 1, -1):
+                res.append(matrix[b - 1][i])
+            b -= 1
 
-            # Traverse from top to bottom.
-            for i in range(top, bottom + 1):
-                ans.append(matrix[i][right])
-            right -= 1
-
-            # Traverse from right to left.
-            if top <= bottom:
-                for i in range(right, left - 1, -1):
-                    ans.append(matrix[bottom][i])
-                bottom -= 1
-
-            # Traverse from bottom to top.
-            if left <= right:
-                for i in range(bottom, top - 1, -1):
-                    ans.append(matrix[i][left])
-                left += 1
-
-        return ans
+            # move bottom to top
+            for i in range(b - 1, t - 1, -1):
+                res.append(matrix[i][l])
+            l += 1
+        return res
